@@ -98,7 +98,7 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
 
 ##### Skills to show you have knowledge
 
-* Make the browser window say your site's name <title>`
+* Make the browser window say your site's name `<title>`
 * Link to an external css & javascript file
 * Be able to build proper structure to make an HTML grid with content in it
 ```html
