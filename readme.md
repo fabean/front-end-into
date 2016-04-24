@@ -70,19 +70,53 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
   * `<section class="this-section"> ... </section>`
 * article
   * Represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). This could be a forum post, a magazine or newspaper article, a blog entry, an object, or any other independent item of content.
-  * `<article> ... </article>
-* footer
+  * `<article> ... </article>`
+* [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
   * Represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
-* nav
-* header
-* aside
-* button
-* a
-* p
-* u
-* b
-* i
-* video
+  * `<footer> ... </footer>`
+* [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
+  * Represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+  * `<nav class="main-nav"><a href="/">Home</a> ... </nav>`
+* [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
+  * Represents a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, wrapped section's header, a search form, and so on.
+  * `<header><nav>...</header>`
+* [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
+  * epresents a section of the page with content connected tangentially to the rest, which could be considered separate from that content. These sections are often represented as sidebars or inserts.
+  * `<aside class="sidebar-links"> ... </aside>`
+* [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+  * Represents a clickable button.
+  * `<button>click me!</button>`
+* [a](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+  * defines a hyperlink to a location on the same page or any other page on the Web.
+  * `<a href="https://google.com">Google</a>
+  * These get used wrong a lot
+    * Good
+      * `To use a good search engine, you should check out <a href="https://google.com">Google.com</a>.`
+    * Bad
+      * `To use a good search engine, checkout out Google by <a href="https://google.com">clicking here</a>.
+* [p](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+  * Represents a paragraph of text.
+  * `<p>paragraphs go here</p>`
+* [u](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u)
+  * Renders text with an underline, a line under the baseline of its content.
+  * `A book worth reading is <u>The Pragmatic Programmer</u>.`
+* [b](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b)
+  * Represents a span of text stylistically different from normal text, without conveying any special importance or relevance.
+  * `Please only use HTML for <b>good</b>.`
+* [i](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
+  * Represents a range of text that is set off from the normal text for some reason, for example, technical terms, foreign language phrases, or fictional character thoughts. It is typically displayed in italic type.
+  * `A book worth reading is <i>The Pragmatic Programmer</i>.`
+* [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+  * Embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the `<source>` element; the browser will choose the most suitable one.
+  * 
+  ```html
+  <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
+    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
+    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+    Your browser doesn't support HTML5 video tag.
+  </video>
+```
 * audio
 * form
 * input
