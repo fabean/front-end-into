@@ -117,13 +117,52 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
     Your browser doesn't support HTML5 video tag.
   </video>
 ```
-* audio
-* form
-* input
-* label
-* img
+* [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+  * Embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the `<source>` element; the browser will choose the most suitable one.
+  *
+  ```html
+  <audio controls="controls">
+    Your browser does not support the <code>audio</code> element.
+    <source src="foo.wav" type="audio/wav">
+  </audio>
+  ```
+* [form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+  * Represents a document section that contains interactive controls to submit information to a web server.
+  * 
+  ```html
+  <form action="" method="post">
+    <label for="POST-name">Name:</label>
+    <input id="POST-name" type="text">
+    <input type="submit" value="Save">
+  </form>html
+  ```
+* [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+  * create interactive controls for web-based forms in order to accept data from the user. How an `<input>` works varies considerably depending on the value of its type attribute.
+  * `<input type="text" value="Type here">`
+* [label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+  * Represents a caption for an item in a user interface.
+  * `<label>First name: <input type="text" name="fname" /></label>`
+* [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+  * Represents an image in the document.
+  * `<img src="http://placekitten.com/400/300" />
 * ul,ol,li
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+  * ordered list (1,2,3...) and unordered listed (*, *, * ...)
+  *
+  ```html
+  <ol>
+    <li>first priority</li>
+    <li>second priority<li>
+  </ol>
+  <ul>
+    <li>bullet 1</li>
+    <li>bullet 2</li>
+  </ul>
+  ```
 * table, thead, tbody, tr, td
+  * 
 
 ##### Skills to know
 * What tags are self closing?
