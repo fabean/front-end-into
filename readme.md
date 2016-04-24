@@ -253,7 +253,7 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
 The frontend designer is someone so cares about to the site looks and feels to the users. The language used to make websites styled properly is called CSS (Cascading Style Sheets). CSS is a hard one because it's easy to learn and use and get results, but hard to master and do things the right way every time.
 
 #### Things to help
-* You should use a linter to help know when you write bad CSS
+* You should use a linter to help know when you write bad CSS. This runs when you save and lets you know all the mistakes you made. The hard thing about CSS is your code could run just fine but that doesn't mean it's good or right.
   * [Stylint](https://github.com/stylelint/stylelint)
   * Here is our config:
 ```
@@ -284,6 +284,27 @@ The frontend designer is someone so cares about to the site looks and feels to t
 
 #### Knowledge
 * You will want to know what a preprocessor is and how to use one
+  * What is it?
+    * A preprocessor is a program that takes one type of data and converts it to another type of data.
+    * So in CSS you write in a preprocess language, which gives you some sort of functionality that the final language does not support but you feel like is benificial.
+  * Why do they exist?
+    * CSS is a pretty dumb language, and isn't efficient. So someone came up with the idea to add features that would make CSS better, made a different language, but since browsers only understand CSS it converts it to CSS when it's done.
+  * [Sass](http://sass-lang.com/) is probably the most popular preproccessor out there
+    * *Features:*
+      * *Variables:* Do you use the same color of blue all over your site? Why not just use a variable of `$blue` instead of trying to remember the six digit hex code everytime. Then what if later your designer says you used the wrong color blue, now you only need to change that variable once instead of doing a find and replace across the whole project which could be thousands of lines of CSS.
+      * *Nesting:* To me this is the best reason to use Sass even if you use no other feature. In CSS you have to say `.container { background: red; } .container .child { background: green; }`. That's annoying because you have to repeat yourself in Sass you write
+      ```sass
+        .container {
+          background: red;
+
+          .child {
+            background: green;
+          }
+        }
+      ```
+      Isn't that nicer? Yes, yes it is.
+      * *Multiple Files:* In CSS you **can** have multiple files but then you have to include all of those in your HTML document which is sort of lame. In Sass you can make as many files as you want, then in compile them all down to just one file and compress it to amke the browser happy but it still makes sense to you.
+      * There are tons of features, and I suggest reading the docs and playing around but to me those three listed are more than enough to make the jump and learn the rest later.
 * Every common propery and what it does / when to use it
   * animation
   * background
