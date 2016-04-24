@@ -59,16 +59,20 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
 * h1,h2,h3,h4,h5,h6
   * Heading elements implement six levels of document headings, `<h1>` is the most important and `<h6>` is the least. A heading element briefly describes the topic of the section it introduces.
   * `<h1>Page Title</h1>`
-* div
+* [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
   * generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as `<article>` or `<nav>`) is appropriate.
   * `<div class="body-wrapper"> ... </div>`
-* span
+* [span](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
   * generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the `class` or `id` attributes).
   * `<span class="description"> ... </span>`
-* section
-  * 
+* [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+  * Represents a generic section of a document, i.e., a thematic grouping of content, typically with a heading. Each `<section>` should be identified, typically by including a heading (`<h1>-<h6>` element) as a child of the `<section>` element.
+  * `<section class="this-section"> ... </section>`
 * article
+  * Represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). This could be a forum post, a magazine or newspaper article, a blog entry, an object, or any other independent item of content.
+  * `<article> ... </article>
 * footer
+  * Represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
 * nav
 * header
 * aside
