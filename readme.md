@@ -35,28 +35,34 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
 * Doctype
   * doctype is a required tag that's what tells the browser what type of document it's looking at so it knows how to render the page.
   * `<!DOCTYPE html>`
-* html
+* [html](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)
   * The `html` tag wraps around all of your HTML code, it generally is your second line after the doctype and last line of your HTML pages.
   * `<html> ... </html>`
-* head
+* [head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)
   * The `head` is everything on your page that doesn't show to the user, it is use to name the page, load the styles & describe what's happening on the page to search engines.
   * `<head> ... </head>`
-* meta
+* [meta](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
   * The `meta` tag goes in the `head` and is used to describe the page and help search engines and social sites know what this page is about. If you want Facebook to pull the right image when someone shares a page of your site you need to configure the metatags properly.
   * `<meta charset="utf-8">`
-* link
+* [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
   * The `link` tag is used to load in external css files (possibly other things too)
   * `<link href="style.css" rel="stylesheet">`
-* script
+* [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
   * `script` tag is where all your javascript goes. You generally are going to use a script tag to load an external javascript file you want to run on this page.
   * `<script src="javascript.js"></script>`
-* title
+* [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
   * this is your page `title` it's what shows in your browsers window.
   * `<title>My First Website</title>`
-* body
+* [body](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
   * Represents the content of an HTML document. There can be only one `<body>` element in a document.
   * `<body> ... all content goes here ... </body>`
 * h1,h2,h3,h4,h5,h6
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6
   * Heading elements implement six levels of document headings, `<h1>` is the most important and `<h6>` is the least. A heading element briefly describes the topic of the section it introduces.
   * `<h1>Page Title</h1>`
 * [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
@@ -68,7 +74,7 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
 * [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
   * Represents a generic section of a document, i.e., a thematic grouping of content, typically with a heading. Each `<section>` should be identified, typically by including a heading (`<h1>-<h6>` element) as a child of the `<section>` element.
   * `<section class="this-section"> ... </section>`
-* article
+* [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
   * Represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). This could be a forum post, a magazine or newspaper article, a blog entry, an object, or any other independent item of content.
   * `<article> ... </article>`
 * [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
@@ -162,15 +168,50 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
   </ul>
   ```
 * table, thead, tbody, tr, td
-  * 
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+  * Tables have a bad rap, because they used to be used for everything. If you just use them to actually make tables of data it works out great.
+  *
+  ```html
+    <table>
+      <thead>
+        <tr>
+          <th>Header content 1</th>
+          <th>Header content 2</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td>Footer content 1</td>
+          <td>Footer content 2</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Body content 1</td>
+          <td>Body content 2</td>
+        </tr>
+      </tbody>
+    </table>
+  ```
+* I'm sure I've missed some important HTML elements but I used all of the ones I find myself using on a weekly basis. 
 
 ##### Skills to know
 * What tags are self closing?
+  * `<input type="text" name="fname" />`
+  * `<img src="#" />`
+  * `<link ... />`
 * Proper indenting of HTML
+  * indenting and making your code look pretty is very important. This is a skill you should learn with HTML and it will carry over to every language you can type.
 * How do you give an element an ID or a class
   * why would you do this?
+    * ID
+      * When you give an element an ID you can now go to yoururl.com#theIDvalue which is great for linking people to lower on the page.
+      * In JavaScript grabbing an element by an ID is way faster than a class, because there can only be one ID per page so once it finds it you're done.
+    * Class
+      * Classes are using in CSS & JavaScript (when you need more than 1 element to be grabbed in JS) so it's good to put classes on multiple elements that share styling. For example a class of `error` could be used to outline inputs with red so you know where you messed up filling out the form.
 * How to give elements attributes
   * examples are `disabled`
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
 
 
 ##### Skills to show you have knowledge
