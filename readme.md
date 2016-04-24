@@ -144,7 +144,7 @@ Regardless of what path you want to take you will need to know HTML. HTML (Hyper
   * `<label>First name: <input type="text" name="fname" /></label>`
 * [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
   * Represents an image in the document.
-  * `<img src="http://placekitten.com/400/300" />
+  * `<img src="http://placekitten.com/400/300" />`
 * ul,ol,li
   * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
   * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
