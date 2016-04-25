@@ -290,9 +290,9 @@ The frontend designer is someone so cares about to the site looks and feels to t
   * Why do they exist?
     * CSS is a pretty dumb language, and isn't efficient. So someone came up with the idea to add features that would make CSS better, made a different language, but since browsers only understand CSS it converts it to CSS when it's done.
   * [Sass](http://sass-lang.com/) is probably the most popular preproccessor out there
-    * *Features:*
-      * *Variables:* Do you use the same color of blue all over your site? Why not just use a variable of `$blue` instead of trying to remember the six digit hex code everytime. Then what if later your designer says you used the wrong color blue, now you only need to change that variable once instead of doing a find and replace across the whole project which could be thousands of lines of CSS.
-      * *Nesting:* To me this is the best reason to use Sass even if you use no other feature. In CSS you have to say `.container { background: red; } .container .child { background: green; }`. That's annoying because you have to repeat yourself in Sass you write
+    * **Features:**
+      * **Variables:** Do you use the same color of blue all over your site? Why not just use a variable of `$blue` instead of trying to remember the six digit hex code everytime. Then what if later your designer says you used the wrong color blue, now you only need to change that variable once instead of doing a find and replace across the whole project which could be thousands of lines of CSS.
+      * **Nesting:** To me this is the best reason to use Sass even if you use no other feature. In CSS you have to say `.container { background: red; } .container .child { background: green; }`. That's annoying because you have to repeat yourself in Sass you write
       ```sass
         .container {
           background: red;
@@ -303,37 +303,86 @@ The frontend designer is someone so cares about to the site looks and feels to t
         }
       ```
       Isn't that nicer? Yes, yes it is.
-      * *Multiple Files:* In CSS you **can** have multiple files but then you have to include all of those in your HTML document which is sort of lame. In Sass you can make as many files as you want, then in compile them all down to just one file and compress it to amke the browser happy but it still makes sense to you.
+      * **Multiple Files:** In CSS you *can* have multiple files but then you have to include all of those in your HTML document which is sort of lame. In Sass you can make as many files as you want, then in compile them all down to just one file and compress it to amke the browser happy but it still makes sense to you.
       * There are tons of features, and I suggest reading the docs and playing around but to me those three listed are more than enough to make the jump and learn the rest later.
 * Every common propery and what it does / when to use it
-  * animation
-  * background
-  * border
-  * bottom
-  * box-sizing
-  * box-shadow
-  * clip
-  * color
-  * content
-  * cursor
-  * display
-  * flex
-  * float
-  * font
-  * height
-  * justify-content
-  * left
-  * letter-spacing
-  * line-height
-  * list-style
-  * margin
-  * max-height
-  * max-width
-  * min-height
-  * min-width
-  * object-fit
-  * order
-  * outline
+  * [animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+    * This is the shorthand to define what animation an element is using. This is used to make elements move around the page.
+    * [hamburger menu](http://codepen.io/fabean/pen/XXegoQ)
+    * [loading spinner](http://codepen.io/fabean/pen/LEBdmp)
+  * [background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
+    * Shorthand for all the different things you can do to an elements background. Most common usages including changing the background color, or putting an image in the background of something.
+  * [border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+    * Setting the border of an element. Used to give something a border...
+  * [border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+    * Want something with rounded corners? this is your friend for all you web 2.0 people
+  * [bottom](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom)
+    * participates in specifying the position of positioned elements.
+  * [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+    * property is used to alter the default CSS box model used to calculate width and height of the elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+    * This is actually hard to understand, but it's very useful. I'll give you an example.
+      * You define the width of an element as 100px wide. But you also added a padding to this element of 10px, so how wide is your element? 120px wide, WHAT!? That's the default behavior of the box model. Well here comes the use of your little new best friend `box-sizing: border-box;` This makes it so if you define the width of 100px it will always be 100px no matter what padding, border, or whatever you add to your element.
+  * [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+    * Property describes one or more shadow effects as a comma-separated list. It enables you to cast a drop shadow from the frame of almost any element.
+  * [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+    * prevents a portion of an element from getting displayed by defining a clipping region to be displayed i.e, only a specific region of the element is displayed.
+    * Basically to make really cool designs in CSS you use this
+    * [github logo in CSS](http://codepen.io/chreeswright/pen/grXpjL)
+  * [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+    * sets the foreground color of an element's text content, and its decorations. It doesn't affect any other characteristic of the element; it should really be called text-color and would have been named so, save for historical reasons and its appearance in CSS Level 1.
+  * [content](https://developer.mozilla.org/en-US/docs/Web/CSS/content)
+    * CSS property is used with the ::before and ::after pseudo-elements to generate content in an element.
+    * You can get super crazy with :before & :after like my [Mario in CSS](http://codepen.io/fabean/pen/XJNpbd?editors=0100)
+  * [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+    * property specifies the mouse cursor displayed when the mouse pointer is over an element.
+    * Want to make it so the moust looks like an element is clickable? this is how we do it.
+  * [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+    * CSS property specifies the type of rendering box used for an element. In HTML, default display property values are taken from behaviors described in the HTML specifications or from the browser/user default stylesheet.
+    * Display inline elements go left & right, display block go up & down.
+  * [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
+    * Just read this [guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    * Flexbox is the savior to CSS
+  * [float](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+    * specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
+    * Useful to get text to wrap around an image or an older way to make grids (now people use `display: inline-block;` at least last I heard they did)
+  * [font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+    * shorthand property for setting font-style, font-variant, font-weight, font-size, line-height and font-family, or a way to set the element's font to a system font, using specific keywords.
+  * [height](https://developer.mozilla.org/en-US/docs/Web/CSS/height<Paste>)
+    * Specifies the height of the content area of an element. The content area is inside the padding, border, and margin of the element.
+  * [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+    * property defines how the browser distributes space between and around flex items along the main-axis of their container.
+  * [left](https://developer.mozilla.org/en-US/docs/Web/CSS/left)
+    * specifies part of the position of positioned elements.
+  * [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+    * specifies spacing behavior between text characters.
+  * [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+    * On block level elements, the line-height property specifies the minimum height of line boxes within the element.
+    * On non-replaced inline elements, line-height specifies the height that is used to calculate line box height. On replaced inline elements such as buttons or other input elements, line-height has no effect.
+    * Mostly used to change the space between lines of text.
+  * [list-style](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)
+    * shorthand property for setting list-style-type, list-style-image and list-style-position.
+    * Mostly used when people make a menu a `ul` but you don't want bullet points `list-style: none;`
+  * [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+    * Sets the margin for all four sides.
+    * It's the space around the element.
+  * [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
+    * used to set the maximum height of an element. It prevents the used value of the height property from becoming larger than the value specified for max-height.
+    * I don't really use this that much, but it's a common thing. Height as you will learn is weird on the web.
+  * [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
+    * used to set the maximum width of a given element. It prevents the used value of the width property from becoming larger than the value specified for max-width.
+    * I use this a lot more than `max-height` but mostly on "we don't want our website getting any wider than 1440px wide" `.row { max-width: 1440px; }`
+  * [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
+    * used to set the minimum height of a given element. It prevents the used value of the height property from becoming smaller than the value specified for min-height.
+  * [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)
+    * used to set the minimum width of a given element. It prevents the used value of the width property from becoming smaller than the value specified for min-width.
+  * [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+    * specifies how the contents of a replaced element should be fitted to the box established by its used height and width.
+    * used when you're using an actual `<img>` as a background image and need to make it fit whatever it's container with without skewing the dimensions.
+  * [order](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
+    * specifies the order used to lay out flex items in their flex container. Elements are laid out in the ascending order of the order value. Elements with the same order value are laid out in the order in which they appear in the source code.
+  * [outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
+    * shorthand property for setting one or more of the individual outline properties outline-style, outline-width and outline-color in a single declaration. In most cases the use of this shortcut is preferable and more convenient.
+    * I don't think I've ever used this.
   * overflow
   * padding
   * right
