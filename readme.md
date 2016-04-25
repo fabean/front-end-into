@@ -383,18 +383,51 @@ The frontend designer is someone so cares about to the site looks and feels to t
   * [outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
     * shorthand property for setting one or more of the individual outline properties outline-style, outline-width and outline-color in a single declaration. In most cases the use of this shortcut is preferable and more convenient.
     * I don't think I've ever used this.
-  * overflow
-  * padding
-  * right
-  * text-align
-  * text-decoration
-  * text-shadown
-  * text-transform
-  * top
-  * transform
-  * vertical-align
-  * width
-  * z-index
+  * [overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+    * specifies whether to clip content, render scrollbars or just display content when it overflows its block level container.
+    * Very useful if you have floated content, put `overflow: hidden;` on the wrapper and it will kill all the floats and keep your page happy.
+  * [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+    * Sets the padding space on all sides of an element. The padding area is the space between the content of the element and its border. Negative values are not allowed.
+    * Padding is inside the element, so if you don't want your text touching the edge of your box you need padding.
+  * [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+    * chooses alternative rules for positioning elements, designed to be useful for scripted animation effects.
+    * By default things are `position: static`.
+    * **All `position: absolute` elements top,left,right,bottom is measured of their closest parent element with `position: relative` that's important to remember!**
+    * `position: fixed` is measured off the whole window, it's how you get elements to scroll around the page with you
+      * Also how you make modals, but by reading this you're taking an oath to not create modals!
+  * [right](https://developer.mozilla.org/en-US/docs/Web/CSS/right)
+    * specifies part of the position of positioned elements.
+    * Important for absolutely positioned elements.
+  * [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+    * describes how inline content like text is aligned in its parent block element. text-align does not control the alignment of block elements, only their inline content.
+    * You use this to center text: `text-align: center;`
+  * [text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+    * used to set the text formatting to underline, overline, line-through or blink. Underline and overline decorations are positioned under the text, line-through over it.
+    * need your `<a>` to not be underlined? `text-decoration: none;`
+  * [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+    * adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and text-decorations of the element.
+    * Web 2.0 FTW!
+  * [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+    * specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+    * Use this to capitalize all your menu links instead of actually writing them out in all caps, no need to shout on the internet.
+  * [top](https://developer.mozilla.org/en-US/docs/Web/CSS/top)
+    * specifies part of the position of positioned elements. It has no effect on non-positioned elements.
+  * [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+    * lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed.
+    * if you're animating something left, right, up or down it's better to use `transform: translate(10px 50px)` than left,right... because sub-pixel rendering and GPU optimization.
+      * The things you learn the more you do this...
+    * Lets you rotate things! `transform: rotate(360deg);`
+  * [transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+    * shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. It enables you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.
+    * What when someone hovers your button it fades to a darker color? `transition: background 300ms ease;` will accomplish that for you.
+  * [vertical-align](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+    * specifies the vertical alignment of an inline or table-cell box.
+    * This never actually works the way or when you want it to.
+  * [width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+    * specifies the width of the content area of an element. The content area is inside the padding, border, and margin of the element.
+  * [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+    * specifies the z-order of an element and its descendants. When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one.
+    * please don't just jump to `z-index: 9999999;` have standards please
 * Know what box model is and be albe to describe it
 * know how to make simple animations
 * know what HEX codes are and what is different between them and HSLA, rgba
